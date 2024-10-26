@@ -25,7 +25,7 @@ export default function FoodCard({ item, index }) {
       <View className="flex-row justify-between items-center px-1">
         <Text className="text-2xl font-semibold text-white">${item.price}</Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate("FoodDetails")}
+          onPress={() => navigation.navigate("FoodDetails", { ...item })}
           className="bg-white p-3 rounded-full"
         >
           <ShoppingBagIcon size="25" color="black" />
